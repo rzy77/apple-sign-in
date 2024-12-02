@@ -15,10 +15,9 @@
     "prettier": "prettier \"**/*.{css,html,ts,js,java}\"",
     "swiftlint": "node-swiftlint",
     "docgen": "docgen --api SignInWithApplePlugin --output-readme README.md --output-json dist/docs.json",
-    "build": "npm run clean && npm run docgen && tsc && rollup -c rollup.config.js",
-    "clean": "rimraf ./dist",
+    "build": "npm run clean && tsc",
+    "clean": "rm -rf ./dist",
     "watch": "tsc --watch",
-    "prepare": "npm run build",
     "prepublishOnly": "npm run build",
     "release": "np --any-branch --yolo"
   },
